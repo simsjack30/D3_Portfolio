@@ -1,0 +1,886 @@
+[
+  {
+    "stateName": "Alabama",
+    "data": {
+      "Total": 2016448,
+      "Married couple households": 941596,
+      "Opposite-sex-married": 935558,
+      "Same-sex-married": 6038,
+      "Male householder and male spouse": 2351,
+      "Female householder and female spouse": 3687,
+      "Cohabitating couple households": 94735,
+      "Opposite-sex-co": 90463,
+      "Same-sex-co": 4272,
+      "Male householder and male partner": 2105,
+      "Female householder and female partner": 2167,
+      "All other households": 980117
+    }
+  },
+  {
+    "stateName": "Alaska",
+    "data": {
+      "Total": 274574,
+      "Married couple households": 129511,
+      "Opposite-sex-married": 128443,
+      "Same-sex-married": 1068,
+      "Male householder and male spouse": 467,
+      "Female householder and female spouse": 601,
+      "Cohabitating couple households": 25302,
+      "Opposite-sex-co": 24149,
+      "Same-sex-co": 1153,
+      "Male householder and male partner": 464,
+      "Female householder and female partner": 689,
+      "All other households": 119761
+    }
+  },
+  {
+    "stateName": "Arizona",
+    "data": {
+      "Total": 2850377,
+      "Married couple households": 1332270,
+      "Opposite-sex-married": 1315801,
+      "Same-sex-married": 16469,
+      "Male householder and male spouse": 7190,
+      "Female householder and female spouse": 9279,
+      "Cohabitating couple households": 238509,
+      "Opposite-sex-co": 225115,
+      "Same-sex-co": 13394,
+      "Male householder and male partner": 6016,
+      "Female householder and female partner": 7378,
+      "All other households": 1279598
+    }
+  },
+  {
+    "stateName": "Arkansas",
+    "data": {
+      "Total": 1216207,
+      "Married couple households": 572596,
+      "Opposite-sex-married": 567367,
+      "Same-sex-married": 5229,
+      "Male householder and male spouse": 2315,
+      "Female householder and female spouse": 2914,
+      "Cohabitating couple households": 68190,
+      "Opposite-sex-co": 64687,
+      "Same-sex-co": 3503,
+      "Male householder and male partner": 1553,
+      "Female householder and female partner": 1950,
+      "All other households": 575421
+    }
+  },
+  {
+    "stateName": "California",
+    "data": {
+      "Total": 13550586,
+      "Married couple households": 6516115,
+      "Opposite-sex-married": 6412893,
+      "Same-sex-married": 103222,
+      "Male householder and male spouse": 57828,
+      "Female householder and female spouse": 45394,
+      "Cohabitating couple households": 1051739,
+      "Opposite-sex-co": 992809,
+      "Same-sex-co": 58930,
+      "Male householder and male partner": 31094,
+      "Female householder and female partner": 27836,
+      "All other households": 5982732
+    }
+  },
+  {
+    "stateName": "Colorado",
+    "data": {
+      "Total": 2384584,
+      "Married couple households": 1144446,
+      "Opposite-sex-married": 1130763,
+      "Same-sex-married": 13683,
+      "Male householder and male spouse": 5791,
+      "Female householder and female spouse": 7892,
+      "Cohabitating couple households": 188877,
+      "Opposite-sex-co": 177064,
+      "Same-sex-co": 11813,
+      "Male householder and male partner": 5951,
+      "Female householder and female partner": 5862,
+      "All other households": 1051261
+    }
+  },
+  {
+    "stateName": "Connecticut",
+    "data": {
+      "Total": 1433635,
+      "Married couple households": 658900,
+      "Opposite-sex-married": 650626,
+      "Same-sex-married": 8274,
+      "Male householder and male spouse": 4626,
+      "Female householder and female spouse": 3648,
+      "Cohabitating couple households": 111361,
+      "Opposite-sex-co": 104618,
+      "Same-sex-co": 6743,
+      "Male householder and male partner": 2864,
+      "Female householder and female partner": 3879,
+      "All other households": 663374
+    }
+  },
+  {
+    "stateName": "Delaware",
+    "data": {
+      "Total": 402334,
+      "Married couple households": 197223,
+      "Opposite-sex-married": 192886,
+      "Same-sex-married": 4337,
+      "Male householder and male spouse": 1828,
+      "Female householder and female spouse": 2509,
+      "Cohabitating couple households": 28592,
+      "Opposite-sex-co": 27604,
+      "Same-sex-co": 988,
+      "Male householder and male partner": 394,
+      "Female householder and female partner": 594,
+      "All other households": 176519
+    }
+  },
+  {
+    "stateName": "District of Columbia",
+    "data": {
+      "Total": 326970,
+      "Married couple households": 77550,
+      "Opposite-sex-married": 71872,
+      "Same-sex-married": 5678,
+      "Male householder and male spouse": 3755,
+      "Female householder and female spouse": 1923,
+      "Cohabitating couple households": 29794,
+      "Opposite-sex-co": 23685,
+      "Same-sex-co": 6109,
+      "Male householder and male partner": 5186,
+      "Female householder and female partner": 923,
+      "All other households": 219626
+    }
+  },
+  {
+    "stateName": "Florida",
+    "data": {
+      "Total": 8826394,
+      "Married couple households": 4119638,
+      "Opposite-sex-married": 4060629,
+      "Same-sex-married": 59009,
+      "Male householder and male spouse": 33379,
+      "Female householder and female spouse": 25630,
+      "Cohabitating couple households": 688183,
+      "Opposite-sex-co": 649138,
+      "Same-sex-co": 39045,
+      "Male householder and male partner": 21920,
+      "Female householder and female partner": 17125,
+      "All other households": 4018573
+    }
+  },
+  {
+    "stateName": "Georgia",
+    "data": {
+      "Total": 4092467,
+      "Married couple households": 1917471,
+      "Opposite-sex-married": 1895417,
+      "Same-sex-married": 22054,
+      "Male householder and male spouse": 10600,
+      "Female householder and female spouse": 11454,
+      "Cohabitating couple households": 246640,
+      "Opposite-sex-co": 230017,
+      "Same-sex-co": 16623,
+      "Male householder and male partner": 7716,
+      "Female householder and female partner": 8907,
+      "All other households": 1928356
+    }
+  },
+  {
+    "stateName": "Hawaii",
+    "data": {
+      "Total": 494827,
+      "Married couple households": 240727,
+      "Opposite-sex-married": 236289,
+      "Same-sex-married": 4438,
+      "Male householder and male spouse": 2156,
+      "Female householder and female spouse": 2282,
+      "Cohabitating couple households": 34775,
+      "Opposite-sex-co": 32509,
+      "Same-sex-co": 2266,
+      "Male householder and male partner": 1192,
+      "Female householder and female partner": 1074,
+      "All other households": 219325
+    }
+  },
+  {
+    "stateName": "Idaho",
+    "data": {
+      "Total": 717151,
+      "Married couple households": 396372,
+      "Opposite-sex-married": 393767,
+      "Same-sex-married": 2605,
+      "Male householder and male spouse": 774,
+      "Female householder and female spouse": 1831,
+      "Cohabitating couple households": 49683,
+      "Opposite-sex-co": 47354,
+      "Same-sex-co": 2329,
+      "Male householder and male partner": 831,
+      "Female householder and female partner": 1498,
+      "All other households": 271096
+    }
+  },
+  {
+    "stateName": "Illinois",
+    "data": {
+      "Total": 5056360,
+      "Married couple households": 2282497,
+      "Opposite-sex-married": 2258037,
+      "Same-sex-married": 24460,
+      "Male householder and male spouse": 12514,
+      "Female householder and female spouse": 11946,
+      "Cohabitating couple households": 359331,
+      "Opposite-sex-co": 340473,
+      "Same-sex-co": 18858,
+      "Male householder and male partner": 9697,
+      "Female householder and female partner": 9161,
+      "All other households": 2414532
+    }
+  },
+  {
+    "stateName": "Indiana",
+    "data": {
+      "Total": 2726489,
+      "Married couple households": 1307913,
+      "Opposite-sex-married": 1293524,
+      "Same-sex-married": 14389,
+      "Male householder and male spouse": 5215,
+      "Female householder and female spouse": 9174,
+      "Cohabitating couple households": 196488,
+      "Opposite-sex-co": 186374,
+      "Same-sex-co": 10114,
+      "Male householder and male partner": 3748,
+      "Female householder and female partner": 6366,
+      "All other households": 1222088
+    }
+  },
+  {
+    "stateName": "Iowa",
+    "data": {
+      "Total": 1330995,
+      "Married couple households": 646759,
+      "Opposite-sex-married": 641479,
+      "Same-sex-married": 5280,
+      "Male householder and male spouse": 2059,
+      "Female householder and female spouse": 3221,
+      "Cohabitating couple households": 102286,
+      "Opposite-sex-co": 98823,
+      "Same-sex-co": 3463,
+      "Male householder and male partner": 1241,
+      "Female householder and female partner": 2222,
+      "All other households": 581950
+    }
+  },
+  {
+    "stateName": "Kansas",
+    "data": {
+      "Total": 1175294,
+      "Married couple households": 574286,
+      "Opposite-sex-married": 569197,
+      "Same-sex-married": 5089,
+      "Male householder and male spouse": 1958,
+      "Female householder and female spouse": 3131,
+      "Cohabitating couple households": 78861,
+      "Opposite-sex-co": 74962,
+      "Same-sex-co": 3899,
+      "Male householder and male partner": 1650,
+      "Female householder and female partner": 2249,
+      "All other households": 522147
+    }
+  },
+  {
+    "stateName": "Kentucky",
+    "data": {
+      "Total": 1828680,
+      "Married couple households": 860710,
+      "Opposite-sex-married": 852749,
+      "Same-sex-married": 7961,
+      "Male householder and male spouse": 2817,
+      "Female householder and female spouse": 5144,
+      "Cohabitating couple households": 132618,
+      "Opposite-sex-co": 124800,
+      "Same-sex-co": 7818,
+      "Male householder and male partner": 3610,
+      "Female householder and female partner": 4208,
+      "All other households": 835352
+    }
+  },
+  {
+    "stateName": "Louisiana",
+    "data": {
+      "Total": 1816902,
+      "Married couple households": 754142,
+      "Opposite-sex-married": 745693,
+      "Same-sex-married": 8449,
+      "Male householder and male spouse": 3249,
+      "Female householder and female spouse": 5200,
+      "Cohabitating couple households": 132487,
+      "Opposite-sex-co": 124352,
+      "Same-sex-co": 8135,
+      "Male householder and male partner": 2879,
+      "Female householder and female partner": 5256,
+      "All other households": 930273
+    }
+  },
+  {
+    "stateName": "Maine",
+    "data": {
+      "Total": 605338,
+      "Married couple households": 292681,
+      "Opposite-sex-married": 288096,
+      "Same-sex-married": 4585,
+      "Male householder and male spouse": 1896,
+      "Female householder and female spouse": 2689,
+      "Cohabitating couple households": 60487,
+      "Opposite-sex-co": 57954,
+      "Same-sex-co": 2533,
+      "Male householder and male partner": 956,
+      "Female householder and female partner": 1577,
+      "All other households": 252170
+    }
+  },
+  {
+    "stateName": "Maryland",
+    "data": {
+      "Total": 2375984,
+      "Married couple households": 1104626,
+      "Opposite-sex-married": 1088115,
+      "Same-sex-married": 16511,
+      "Male householder and male spouse": 5306,
+      "Female householder and female spouse": 11205,
+      "Cohabitating couple households": 162700,
+      "Opposite-sex-co": 155369,
+      "Same-sex-co": 7331,
+      "Male householder and male partner": 3680,
+      "Female householder and female partner": 3651,
+      "All other households": 1108658
+    }
+  },
+  {
+    "stateName": "Massachusetts",
+    "data": {
+      "Total": 2797776,
+      "Married couple households": 1263224,
+      "Opposite-sex-married": 1237487,
+      "Same-sex-married": 25737,
+      "Male householder and male spouse": 11530,
+      "Female householder and female spouse": 14207,
+      "Cohabitating couple households": 225784,
+      "Opposite-sex-co": 209462,
+      "Same-sex-co": 16322,
+      "Male householder and male partner": 8341,
+      "Female householder and female partner": 7981,
+      "All other households": 1308768
+    }
+  },
+  {
+    "stateName": "Michigan",
+    "data": {
+      "Total": 4089794,
+      "Married couple households": 1868821,
+      "Opposite-sex-married": 1850838,
+      "Same-sex-married": 17983,
+      "Male householder and male spouse": 7839,
+      "Female householder and female spouse": 10144,
+      "Cohabitating couple households": 300932,
+      "Opposite-sex-co": 290217,
+      "Same-sex-co": 10715,
+      "Male householder and male partner": 4823,
+      "Female householder and female partner": 5892,
+      "All other households": 1920041
+    }
+  },
+  {
+    "stateName": "Minnesota",
+    "data": {
+      "Total": 2322190,
+      "Married couple households": 1147255,
+      "Opposite-sex-married": 1135903,
+      "Same-sex-married": 11352,
+      "Male householder and male spouse": 4743,
+      "Female householder and female spouse": 6609,
+      "Cohabitating couple households": 182299,
+      "Opposite-sex-co": 173978,
+      "Same-sex-co": 8321,
+      "Male householder and male partner": 4556,
+      "Female householder and female partner": 3765,
+      "All other households": 992636
+    }
+  },
+  {
+    "stateName": "Mississippi",
+    "data": {
+      "Total": 1148340,
+      "Married couple households": 503356,
+      "Opposite-sex-married": 500483,
+      "Same-sex-married": 2873,
+      "Male householder and male spouse": 768,
+      "Female householder and female spouse": 2105,
+      "Cohabitating couple households": 57370,
+      "Opposite-sex-co": 54316,
+      "Same-sex-co": 3054,
+      "Male householder and male partner": 1127,
+      "Female householder and female partner": 1927,
+      "All other households": 587614
+    }
+  },
+  {
+    "stateName": "Missouri",
+    "data": {
+      "Total": 2521832,
+      "Married couple households": 1168049,
+      "Opposite-sex-married": 1157331,
+      "Same-sex-married": 10718,
+      "Male householder and male spouse": 4595,
+      "Female householder and female spouse": 6123,
+      "Cohabitating couple households": 184926,
+      "Opposite-sex-co": 175051,
+      "Same-sex-co": 9875,
+      "Male householder and male partner": 4095,
+      "Female householder and female partner": 5780,
+      "All other households": 1168857
+    }
+  },
+  {
+    "stateName": "Montana",
+    "data": {
+      "Total": 464072,
+      "Married couple households": 223380,
+      "Opposite-sex-married": 222194,
+      "Same-sex-married": 1186,
+      "Male householder and male spouse": 112,
+      "Female householder and female spouse": 1074,
+      "Cohabitating couple households": 37151,
+      "Opposite-sex-co": 35913,
+      "Same-sex-co": 1238,
+      "Male householder and male partner": 685,
+      "Female householder and female partner": 553,
+      "All other households": 203541
+    }
+  },
+  {
+    "stateName": "Nebraska",
+    "data": {
+      "Total": 803157,
+      "Married couple households": 390540,
+      "Opposite-sex-married": 388233,
+      "Same-sex-married": 2307,
+      "Male householder and male spouse": 973,
+      "Female householder and female spouse": 1334,
+      "Cohabitating couple households": 54454,
+      "Opposite-sex-co": 52746,
+      "Same-sex-co": 1708,
+      "Male householder and male partner": 917,
+      "Female householder and female partner": 791,
+      "All other households": 358163
+    }
+  },
+  {
+    "stateName": "Nevada",
+    "data": {
+      "Total": 1198356,
+      "Married couple households": 530175,
+      "Opposite-sex-married": 519721,
+      "Same-sex-married": 10454,
+      "Male householder and male spouse": 5234,
+      "Female householder and female spouse": 5220,
+      "Cohabitating couple households": 102547,
+      "Opposite-sex-co": 97352,
+      "Same-sex-co": 5195,
+      "Male householder and male partner": 2396,
+      "Female householder and female partner": 2799,
+      "All other households": 565634
+    }
+  },
+  {
+    "stateName": "New Hampshire",
+    "data": {
+      "Total": 557220,
+      "Married couple households": 285354,
+      "Opposite-sex-married": 279959,
+      "Same-sex-married": 5395,
+      "Male householder and male spouse": 1589,
+      "Female householder and female spouse": 3806,
+      "Cohabitating couple households": 51928,
+      "Opposite-sex-co": 49861,
+      "Same-sex-co": 2067,
+      "Male householder and male partner": 874,
+      "Female householder and female partner": 1193,
+      "All other households": 219938
+    }
+  },
+  {
+    "stateName": "New Jersey",
+    "data": {
+      "Total": 3516978,
+      "Married couple households": 1753523,
+      "Opposite-sex-married": 1734984,
+      "Same-sex-married": 18539,
+      "Male householder and male spouse": 8923,
+      "Female householder and female spouse": 9616,
+      "Cohabitating couple households": 245942,
+      "Opposite-sex-co": 234971,
+      "Same-sex-co": 10971,
+      "Male householder and male partner": 7538,
+      "Female householder and female partner": 3433,
+      "All other households": 1517513
+    }
+  },
+  {
+    "stateName": "New Mexico",
+    "data": {
+      "Total": 848218,
+      "Married couple households": 344144,
+      "Opposite-sex-married": 338452,
+      "Same-sex-married": 5692,
+      "Male householder and male spouse": 1711,
+      "Female householder and female spouse": 3981,
+      "Cohabitating couple households": 73821,
+      "Opposite-sex-co": 68651,
+      "Same-sex-co": 5170,
+      "Male householder and male partner": 3964,
+      "Female householder and female partner": 1206,
+      "All other households": 430253
+    }
+  },
+  {
+    "stateName": "New York",
+    "data": {
+      "Total": 7774308,
+      "Married couple households": 3288930,
+      "Opposite-sex-married": 3237344,
+      "Same-sex-married": 51586,
+      "Male householder and male spouse": 28221,
+      "Female householder and female spouse": 23365,
+      "Cohabitating couple households": 586369,
+      "Opposite-sex-co": 544543,
+      "Same-sex-co": 41826,
+      "Male householder and male partner": 24843,
+      "Female householder and female partner": 16983,
+      "All other households": 3899009
+    }
+  },
+  {
+    "stateName": "North Carolina",
+    "data": {
+      "Total": 4299266,
+      "Married couple households": 2057368,
+      "Opposite-sex-married": 2036035,
+      "Same-sex-married": 21333,
+      "Male householder and male spouse": 8558,
+      "Female householder and female spouse": 12775,
+      "Cohabitating couple households": 277064,
+      "Opposite-sex-co": 261230,
+      "Same-sex-co": 15834,
+      "Male householder and male partner": 7269,
+      "Female householder and female partner": 8565,
+      "All other households": 1964834
+    }
+  },
+  {
+    "stateName": "North Dakota",
+    "data": {
+      "Total": 331481,
+      "Married couple households": 156026,
+      "Opposite-sex-married": 155033,
+      "Same-sex-married": 993,
+      "Male householder and male spouse": 362,
+      "Female householder and female spouse": 631,
+      "Cohabitating couple households": 23099,
+      "Opposite-sex-co": 22193,
+      "Same-sex-co": 906,
+      "Male householder and male partner": 325,
+      "Female householder and female partner": 581,
+      "All other households": 152356
+    }
+  },
+  {
+    "stateName": "Ohio",
+    "data": {
+      "Total": 4878206,
+      "Married couple households": 2173755,
+      "Opposite-sex-married": 2151234,
+      "Same-sex-married": 22521,
+      "Male householder and male spouse": 10964,
+      "Female householder and female spouse": 11557,
+      "Cohabitating couple households": 380688,
+      "Opposite-sex-co": 362583,
+      "Same-sex-co": 18105,
+      "Male householder and male partner": 6219,
+      "Female householder and female partner": 11886,
+      "All other households": 2323763
+    }
+  },
+  {
+    "stateName": "Oklahoma",
+    "data": {
+      "Total": 1573180,
+      "Married couple households": 746847,
+      "Opposite-sex-married": 738706,
+      "Same-sex-married": 8141,
+      "Male householder and male spouse": 2453,
+      "Female householder and female spouse": 5688,
+      "Cohabitating couple households": 106779,
+      "Opposite-sex-co": 100909,
+      "Same-sex-co": 5870,
+      "Male householder and male partner": 2132,
+      "Female householder and female partner": 3738,
+      "All other households": 719554
+    }
+  },
+  {
+    "stateName": "Oregon",
+    "data": {
+      "Total": 1726340,
+      "Married couple households": 788221,
+      "Opposite-sex-married": 775549,
+      "Same-sex-married": 12672,
+      "Male householder and male spouse": 4895,
+      "Female householder and female spouse": 7777,
+      "Cohabitating couple households": 163568,
+      "Opposite-sex-co": 152362,
+      "Same-sex-co": 11206,
+      "Male householder and male partner": 3645,
+      "Female householder and female partner": 7561,
+      "All other households": 774551
+    }
+  },
+  {
+    "stateName": "Pennsylvania",
+    "data": {
+      "Total": 5294065,
+      "Married couple households": 2462324,
+      "Opposite-sex-married": 2435518,
+      "Same-sex-married": 26806,
+      "Male householder and male spouse": 12873,
+      "Female householder and female spouse": 13933,
+      "Cohabitating couple households": 387775,
+      "Opposite-sex-co": 366389,
+      "Same-sex-co": 21386,
+      "Male householder and male partner": 8911,
+      "Female householder and female partner": 12475,
+      "All other households": 2443966
+    }
+  },
+  {
+    "stateName": "Rhode Island",
+    "data": {
+      "Total": 446688,
+      "Married couple households": 188207,
+      "Opposite-sex-married": 184851,
+      "Same-sex-married": 3356,
+      "Male householder and male spouse": 1729,
+      "Female householder and female spouse": 1627,
+      "Cohabitating couple households": 40267,
+      "Opposite-sex-co": 37575,
+      "Same-sex-co": 2692,
+      "Male householder and male partner": 827,
+      "Female householder and female partner": 1865,
+      "All other households": 218214
+    }
+  },
+  {
+    "stateName": "South Carolina",
+    "data": {
+      "Total": 2136080,
+      "Married couple households": 1018293,
+      "Opposite-sex-married": 1009450,
+      "Same-sex-married": 8843,
+      "Male householder and male spouse": 3827,
+      "Female householder and female spouse": 5016,
+      "Cohabitating couple households": 119734,
+      "Opposite-sex-co": 112865,
+      "Same-sex-co": 6869,
+      "Male householder and male partner": 1870,
+      "Female householder and female partner": 4999,
+      "All other households": 998053
+    }
+  },
+  {
+    "stateName": "South Dakota",
+    "data": {
+      "Total": 368300,
+      "Married couple households": 177786,
+      "Opposite-sex-married": 176946,
+      "Same-sex-married": 840,
+      "Male householder and male spouse": 427,
+      "Female householder and female spouse": 413,
+      "Cohabitating couple households": 28696,
+      "Opposite-sex-co": 27999,
+      "Same-sex-co": 697,
+      "Male householder and male partner": 315,
+      "Female householder and female partner": 382,
+      "All other households": 161818
+    }
+  },
+  {
+    "stateName": "Tennessee",
+    "data": {
+      "Total": 2846684,
+      "Married couple households": 1342153,
+      "Opposite-sex-married": 1330313,
+      "Same-sex-married": 11840,
+      "Male householder and male spouse": 4658,
+      "Female householder and female spouse": 7182,
+      "Cohabitating couple households": 195854,
+      "Opposite-sex-co": 182970,
+      "Same-sex-co": 12884,
+      "Male householder and male partner": 5614,
+      "Female householder and female partner": 7270,
+      "All other households": 1308677
+    }
+  },
+  {
+    "stateName": "Texas",
+    "data": {
+      "Total": 11087708,
+      "Married couple households": 5401546,
+      "Opposite-sex-married": 5343364,
+      "Same-sex-married": 58182,
+      "Male householder and male spouse": 26648,
+      "Female householder and female spouse": 31534,
+      "Cohabitating couple households": 755355,
+      "Opposite-sex-co": 706285,
+      "Same-sex-co": 49070,
+      "Male householder and male partner": 24290,
+      "Female householder and female partner": 24780,
+      "All other households": 4930807
+    }
+  },
+  {
+    "stateName": "Utah",
+    "data": {
+      "Total": 1129660,
+      "Married couple households": 672316,
+      "Opposite-sex-married": 666472,
+      "Same-sex-married": 5844,
+      "Male householder and male spouse": 2195,
+      "Female householder and female spouse": 3649,
+      "Cohabitating couple households": 58705,
+      "Opposite-sex-co": 55008,
+      "Same-sex-co": 3697,
+      "Male householder and male partner": 1329,
+      "Female householder and female partner": 2368,
+      "All other households": 398639
+    }
+  },
+  {
+    "stateName": "Vermont",
+    "data": {
+      "Total": 277090,
+      "Married couple households": 131234,
+      "Opposite-sex-married": 128456,
+      "Same-sex-married": 2778,
+      "Male householder and male spouse": 1018,
+      "Female householder and female spouse": 1760,
+      "Cohabitating couple households": 29091,
+      "Opposite-sex-co": 26841,
+      "Same-sex-co": 2250,
+      "Male householder and male partner": 696,
+      "Female householder and female partner": 1554,
+      "All other households": 116765
+    }
+  },
+  {
+    "stateName": "Virginia",
+    "data": {
+      "Total": 3380607,
+      "Married couple households": 1642002,
+      "Opposite-sex-married": 1625405,
+      "Same-sex-married": 16597,
+      "Male householder and male spouse": 7689,
+      "Female householder and female spouse": 8908,
+      "Cohabitating couple households": 221705,
+      "Opposite-sex-co": 210017,
+      "Same-sex-co": 11688,
+      "Male householder and male partner": 5913,
+      "Female householder and female partner": 5775,
+      "All other households": 1516900
+    }
+  },
+  {
+    "stateName": "Washington",
+    "data": {
+      "Total": 3079953,
+      "Married couple households": 1499199,
+      "Opposite-sex-married": 1475316,
+      "Same-sex-married": 23883,
+      "Male householder and male spouse": 11289,
+      "Female householder and female spouse": 12594,
+      "Cohabitating couple households": 265651,
+      "Opposite-sex-co": 247715,
+      "Same-sex-co": 17936,
+      "Male householder and male partner": 7742,
+      "Female householder and female partner": 10194,
+      "All other households": 1315103
+    }
+  },
+  {
+    "stateName": "West Virginia",
+    "data": {
+      "Total": 736341,
+      "Married couple households": 338510,
+      "Opposite-sex-married": 336215,
+      "Same-sex-married": 2295,
+      "Male householder and male spouse": 815,
+      "Female householder and female spouse": 1480,
+      "Cohabitating couple households": 49938,
+      "Opposite-sex-co": 48415,
+      "Same-sex-co": 1523,
+      "Male householder and male partner": 909,
+      "Female householder and female partner": 614,
+      "All other households": 347893
+    }
+  },
+  {
+    "stateName": "Wisconsin",
+    "data": {
+      "Total": 2491121,
+      "Married couple households": 1171977,
+      "Opposite-sex-married": 1162138,
+      "Same-sex-married": 9839,
+      "Male householder and male spouse": 3508,
+      "Female householder and female spouse": 6331,
+      "Cohabitating couple households": 214304,
+      "Opposite-sex-co": 206492,
+      "Same-sex-co": 7812,
+      "Male householder and male partner": 2716,
+      "Female householder and female partner": 5096,
+      "All other households": 1104840
+    }
+  },
+  {
+    "stateName": "Wyoming",
+    "data": {
+      "Total": 243321,
+      "Married couple households": 119329,
+      "Opposite-sex-married": 118219,
+      "Same-sex-married": 1110,
+      "Male householder and male spouse": 40,
+      "Female householder and female spouse": 1070,
+      "Cohabitating couple households": 18398,
+      "Opposite-sex-co": 17938,
+      "Same-sex-co": 460,
+      "Male householder and male partner": 145,
+      "Female householder and female partner": 315,
+      "All other households": 105594
+    }
+  },
+  {
+    "stateName": "Puerto Rico",
+    "data": {
+      "Total": 1289311,
+      "Married couple households": 449853,
+      "Opposite-sex-married": 447395,
+      "Same-sex-married": 2458,
+      "Male householder and male spouse": 993,
+      "Female householder and female spouse": 1465,
+      "Cohabitating couple households": 143552,
+      "Opposite-sex-co": 137873,
+      "Same-sex-co": 5679,
+      "Male householder and male partner": 3157,
+      "Female householder and female partner": 2522,
+      "All other households": 695906
+    }
+  }
+]
