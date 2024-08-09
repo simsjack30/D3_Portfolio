@@ -882,5 +882,73 @@
       "Female householder and female partner": 2522,
       "All other households": 695906
     }
+  },
+  {
+    "stateName": "American Samoa",
+    "data": {
+      "Total": 243321,
+      "Married couple households": 119329,
+      "Opposite-sex-married": 118219,
+      "Same-sex-married": 1110,
+      "Male householder and male spouse": 40,
+      "Female householder and female spouse": 1070,
+      "Cohabitating couple households": 18398,
+      "Opposite-sex-co": 17938,
+      "Same-sex-co": 460,
+      "Male householder and male partner": 145,
+      "Female householder and female partner": 315,
+      "All other households": 105594
+    }
+  },
+  {
+    "stateName": "Guam",
+    "data": {
+      "Total": 243321,
+      "Married couple households": 119329,
+      "Opposite-sex-married": 118219,
+      "Same-sex-married": 1110,
+      "Male householder and male spouse": 40,
+      "Female householder and female spouse": 1070,
+      "Cohabitating couple households": 18398,
+      "Opposite-sex-co": 17938,
+      "Same-sex-co": 460,
+      "Male householder and male partner": 145,
+      "Female householder and female partner": 315,
+      "All other households": 105594
+    }
+  },
+  {
+    "stateName": "Commonwealth of the Northern Mariana Islands",
+    "data": {
+      "Total": 243321,
+      "Married couple households": 119329,
+      "Opposite-sex-married": 118219,
+      "Same-sex-married": 1110,
+      "Male householder and male spouse": 40,
+      "Female householder and female spouse": 1070,
+      "Cohabitating couple households": 18398,
+      "Opposite-sex-co": 17938,
+      "Same-sex-co": 460,
+      "Male householder and male partner": 145,
+      "Female householder and female partner": 315,
+      "All other households": 105594
+    }
+  },
+  {
+    "stateName": "United States Virgin Islands",
+    "data": {
+      "Total": 243321,
+      "Married couple households": 119329,
+      "Opposite-sex-married": 118219,
+      "Same-sex-married": 1110,
+      "Male householder and male spouse": 40,
+      "Female householder and female spouse": 1070,
+      "Cohabitating couple households": 18398,
+      "Opposite-sex-co": 17938,
+      "Same-sex-co": 460,
+      "Male householder and male partner": 145,
+      "Female householder and female partner": 315,
+      "All other households": 105594
+    }
   }
 ]

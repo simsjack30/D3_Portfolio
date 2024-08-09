@@ -21,7 +21,7 @@
 	export let data;
 
 	let serviceUrl: ComponentProps<GeoTile>['url'];
-	let zoomDelta = 0;
+	let zoomDelta = -1;
 	let debug = false;
 
 	const initialLongitude = 66.925;
@@ -51,7 +51,7 @@
 <main class="p-4">
 	<div class="m-4">
 		<div class="flex justify-between items-end flex-row mb-4">
-			<Card>
+			<Card class="elevation-none">
 				<div class="p-2 space-y-2">
 					<h1 class="text-3xl">14 Peaks</h1>
 					<h3 class="italic">The world's 8000 meter peaks</h3>
@@ -133,7 +133,7 @@
 		</Preview>
 		<div class="flex flex-col lg:flex-row gap-4 mt-4">
 			<div class="flex flex-col gap-4">
-				<Card class="">
+				<Card class="elevation-none">
 					<div class="m-4">
 						<p>
 							The 14 peaks over 8000 meters in height, also known as the 8000ers, are a group of
@@ -160,21 +160,21 @@
 			</button>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-4 mt-4">
-			<Card class="">
+			<Card class="elevation-none">
 				<p class="m-4">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
 					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa
 					maiores eos ea quibusdam.
 				</p>
 			</Card>
-			<Card class="">
+			<Card class="elevation-none">
 				<p class="m-4">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
 					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa
 					maiores eos ea quibusdam.
 				</p>
 			</Card>
-			<Card class="">
+			<Card class="elevation-none">
 				<p class="m-4">
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
 					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa

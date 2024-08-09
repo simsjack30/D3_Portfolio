@@ -1,145 +1,165 @@
 <script lang="ts">
-	import { index } from 'd3-array';
+	import { geoAlbersUsa } from 'd3-geo';
+	import { feature } from 'topojson-client';
+	import { Chart, GeoPath, Svg, Tooltip, TooltipItem, Legend } from 'layerchart';
+	import Preview from '$lib/docs/Preview.svelte';
 	import { scaleQuantile } from 'd3-scale';
 	import {
 		schemeAccent,
 		schemeBlues,
 		schemeCategory10,
-		schemeDark2,
-		schemePastel2,
-		schemeYlGnBu
+		schemePaired,
+		schemePRGn,
+		schemePuBu,
+		schemeSet3,
+		schemeSpectral,
+		schemeTableau10
 	} from 'd3-scale-chromatic';
-	import { geoIdentity, type GeoProjection } from 'd3-geo';
-	import { feature } from 'topojson-client';
-	import { format } from 'svelte-ux';
-
-	import {
-		Canvas,
-		Chart,
-		GeoPath,
-		HitCanvas,
-		Legend,
-		Svg,
-		Tooltip,
-		TooltipItem,
-		TransformControls
-	} from 'layerchart';
-
-	import Preview from '$lib/docs/Preview.svelte';
+	import { Card, SelectField, type MenuOption } from 'svelte-ux';
 
 	export let data;
+
 	const states = feature(data.geojson, data.geojson.objects.states);
-	const counties = feature(data.geojson, data.geojson.objects.counties);
-	// console.log(states, counties);
+	const stateData = data.population;
 
-	const projection = geoIdentity as unknown as () => GeoProjection;
+	const stateDataMap = new Map(stateData.map((d) => [d.stateName, d.data]));
 
-	const statesById = index(states.features, (d) => d.id);
+	const enrichedStates = states.features
+		.map((feature) => {
+			const stateName = feature.properties.name;
+			const stateData = stateDataMap.get(stateName);
 
-	const population = data.population.map((d) => {
-		return {
-			id: d.state + d.county,
-			state: statesById.get(d.state)?.properties.name,
-			population: +d.DP05_0001E,
-			populationUnder18: +d.DP05_0019E,
-			percentUnder18: +d.DP05_0019PE
-		};
-	});
-	const populationByFips = index(population, (d) => d.id);
+			return {
+				...feature,
+				properties: {
+					...feature.properties,
+					data: stateData
+				}
+			};
+		})
+		.filter((feature) => feature.properties.data);
 
-	// counties will need to become states here
-	$: enrichedCountiesFeatures = counties.features.map((feature) => {
-		return {
-			...feature,
-			properties: {
-				...feature.properties,
-				data: populationByFips.get(feature.id as string)
-			}
-		};
-	});
+	let numerator = 'Married couple households';
+	let denominator = 'Total';
+
+	let numeratorOptions: MenuOption[] = [
+		{ label: 'Married couple households', value: 'Married couple households' },
+		{ label: 'Opposite-sex-married', value: 'Opposite-sex-married' },
+		{ label: 'Same-sex-married', value: 'Same-sex-married' },
+		{ label: 'Male householder and male spouse', value: 'Male householder and male spouse' },
+		{
+			label: 'Female householder and female spouse',
+			value: 'Female householder and female spouse'
+		},
+		{ label: 'Cohabitating couple households', value: 'Cohabitating couple households' },
+		{ label: 'Opposite-sex-co', value: 'Opposite-sex-co' },
+		{ label: 'Same-sex-co', value: 'Same-sex-co' },
+		{ label: 'Male householder and male partner', value: 'Male householder and male partner' },
+		{
+			label: 'Female householder and female partner',
+			value: 'Female householder and female partner'
+		}
+	];
+
+	let denominatorOptions: MenuOption[] = [
+		{ label: 'Total Households', value: 'Total' },
+		{ label: 'Married couple households', value: 'Married couple households' },
+		{ label: 'Opposite-sex-married', value: 'Opposite-sex-married' },
+		{ label: 'Same-sex-married', value: 'Same-sex-married' },
+		{ label: 'Male householder and male spouse', value: 'Male householder and male spouse' },
+		{
+			label: 'Female householder and female spouse',
+			value: 'Female householder and female spouse'
+		},
+		{ label: 'Cohabitating couple households', value: 'Cohabitating couple households' },
+		{ label: 'Opposite-sex-co', value: 'Opposite-sex-co' },
+		{ label: 'Same-sex-co', value: 'Same-sex-co' },
+		{ label: 'Male householder and male partner', value: 'Male householder and male partner' },
+		{
+			label: 'Female householder and female partner',
+			value: 'Female householder and female partner'
+		}
+	];
 
 	$: colorScale = scaleQuantile<string, string>()
-		.domain(population.map((d) => d.population))
+		.domain(
+			enrichedStates.map(
+				(d) => d.properties.data[numerator] / (d.properties.data[denominator] || 1)
+			)
+		)
 		.range(schemeBlues[9]);
 </script>
 
-<main>
-	<p>sure hope this works</p>
-
-	<Preview data={states}>
-		<div class="h-[600px] overflow-hidden">
-			<Chart
-				geo={{
-					projection,
-					fitGeojson: states
-				}}
-				transform={{
-					mode: 'canvas',
-					initialScrollMode: 'scale'
-				}}
-				padding={{ top: 60 }}
-				tooltip={{ raiseTarget: true }}
-				let:tooltip
-				let:transform
-			>
-				{@const strokeWidth = 1 / transform.scale}
-				<TransformControls />
-
-				<Svg>
-					<g>
-						{#each enrichedCountiesFeatures as feature}
-							<GeoPath
-								geojson={feature}
-								{tooltip}
-								fill={colorScale(feature.properties.data?.population ?? 0)}
-								class="stroke-none hover:stroke-white"
-								{strokeWidth}
-							/>
-						{/each}
-					</g>
-					<g>
-						{#each states.features as feature}
-							<GeoPath
-								geojson={feature}
-								class="fill-none stroke-black/30 pointer-events-none"
-								{strokeWidth}
-							/>
-						{/each}
-					</g>
-				</Svg>
-
-				<Legend
-					scale={colorScale}
-					title="Population"
-					tickFormat={(d) => format(d, 'metric', { maximumSignificantDigits: 2 })}
-					class="absolute bg-surface-100/80 px-2 py-1 backdrop-blur-sm rounded m-1"
-				/>
-
-				<Tooltip
-					header={(data) => data.properties.name + ' - ' + data.properties.data?.state}
-					let:data
-				>
-					{@const d = populationByFips.get(data.id)}
-					<TooltipItem
-						label="Total Population"
-						value={d?.population}
-						format="integer"
-						valueAlign="right"
-					/>
-					<TooltipItem
-						label="Est. Population under 18"
-						value={d?.populationUnder18}
-						format="integer"
-						valueAlign="right"
-					/>
-					<TooltipItem
-						label="Est. Percent under 18"
-						value={d?.percentUnder18 ?? 0 / 100}
-						format="percentRound"
-						valueAlign="right"
-					/>
-				</Tooltip>
-			</Chart>
+<main class="p-4">
+	<div class="m-4">
+		<div class="flex md:flex-row flex-col gap-4 mb-4">
+			<SelectField options={numeratorOptions} bind:value={numerator} clearable={false} />
+			<Card class="">
+				<p class="px-4">Per</p>
+			</Card>
+			<SelectField options={denominatorOptions} bind:value={denominator} clearable={false} />
 		</div>
-	</Preview>
+
+		<Preview data={enrichedStates}>
+			<div class="h-[600px]">
+				<Chart
+					geo={{
+						projection: geoAlbersUsa,
+						fitGeojson: states
+					}}
+					padding={{ top: 60 }}
+					let:tooltip
+				>
+					<Svg>
+						<g>
+							{#each enrichedStates as feature}
+								<GeoPath
+									geojson={feature}
+									{tooltip}
+									fill={colorScale(
+										feature.properties.data[numerator] / (feature.properties.data[denominator] || 1)
+									)}
+									class="stroke-surface-100 hover:fill-surface-content/20"
+								/>
+							{/each}
+						</g>
+					</Svg>
+
+					<Legend
+						scale={colorScale}
+						title={`Proportion of ${numerator} per ${denominator}`}
+						tickFormat={(d) => d.toLocaleString()}
+						class="absolute bg-surface-100/80 px-2 py-1 backdrop-blur-sm rounded m-1"
+					/>
+
+					<Tooltip
+						header={(data) => {
+							const fraction = (
+								data.properties.data[numerator] / (data.properties.data[denominator] || 1)
+							).toFixed(3);
+							return `${data.properties.name}: ${fraction}`;
+						}}
+						let:data
+					>
+						<TooltipItem
+							label={`Proportion of ${numerator} per ${denominator}`}
+							value={(
+								data.properties.data[numerator] / (data.properties.data[denominator] || 1)
+							).toFixed(3)}
+						/>
+						<TooltipItem
+							label={numerator}
+							value={data.properties.data[numerator]}
+							format="integer"
+						/>
+						<TooltipItem
+							label={denominator}
+							value={data.properties.data[denominator]}
+							format="integer"
+						/>
+					</Tooltip>
+				</Chart>
+			</div>
+		</Preview>
+	</div>
 </main>

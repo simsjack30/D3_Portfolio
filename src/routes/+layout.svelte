@@ -8,7 +8,8 @@
 		Tooltip,
 		ThemeSwitch,
 		settings,
-		Icon
+		Icon,
+		getSettings
 	} from 'svelte-ux';
 
 	import {
@@ -24,7 +25,9 @@
 		faMountainCity,
 		faMountainSun,
 		faVenusMars,
-		faRing
+		faRing,
+		faChartSimple,
+		faChartLine
 	} from '@fortawesome/free-solid-svg-icons';
 	import { faTwitter, faApple, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faChessKing } from '@fortawesome/free-regular-svg-icons';
@@ -32,25 +35,26 @@
 	import { page } from '$app/stores';
 	import '../app.postcss';
 
+	const { currentTheme } = getSettings();
+	currentTheme.setTheme('dark');
+
 	settings({
 		components: {
 			AppBar: {
-				classes: 'bg-secondary text-black shadow-lg'
+				classes: 'bg-primary text-black shadow-lg'
 			},
 			AppLayout: {
 				classes: {
-					nav: 'bg-neutral-800 py-2'
+					nav: 'bg-surface-300 py-2'
 				}
 			},
 			NavItem: {
 				classes: {
-					root: 'text-sm text-gray-400 pl-6 py-2 hover:text-white hover:bg-gray-300/10 [&:where(.is-active)]:text-sky-400 [&:where(.is-active)]:bg-gray-500/10'
+					root: 'text-sm text-surface-content pl-6 py-2 hover:bg-surface-100 [&:where(.is-active)]:text-accent-900 dark:[&:where(.is-active)]:text-accent-50 [&:where(.is-active)]:bg-surface-100'
 				}
 			}
 		}
 	});
-
-	// import { Skull, Rabbit } from 'lucide-svelte';
 </script>
 
 <AppLayout>
@@ -58,30 +62,23 @@
 		<NavItem path="/" text="Home" icon={faHome} currentUrl={$page.url} />
 		<NavItem path="/mountain" text="8000 Meter Peaks" icon={faMountain} currentUrl={$page.url} />
 		<NavItem path="/marriage" text="Marriage Statistics" icon={faRing} currentUrl={$page.url} />
-		<NavItem path="/vornoi" text="Vornoi Capitals" icon={faApple} currentUrl={$page.url} />
-		<NavItem path="/world" text="Geo Point" icon={faMountainSun} currentUrl={$page.url} />
-		<NavItem path="/goober" text="Apple Stocks" icon={faMountainCity} currentUrl={$page.url} />
-		<NavItem path="/world_test2" text="Testing" icon={faEarthAsia} currentUrl={$page.url} />
+		<NavItem path="/stock" text="Intel Stock Crash" icon={faChartLine} currentUrl={$page.url} />
 	</svelte:fragment>
 
 	<AppBar title="NYT Showcase">
-		<div slot="actions" class="f lex gap-3">
-			<ThemeSwitch />
-			<Tooltip title="Discord" placement="left" offset={2}>
-				<Button icon={faDiscord} href="https://discord.gg/697JhMPD3t" class="p-2" target="_blank" />
-			</Tooltip>
+		<div slot="actions" class="flex gap-3 items-center">
+			<!-- <ThemeSwitch
+				checked
+				classes={{
+					switch: 'dark:bg-primary-700 dark:border-primary-900',
+					toggle: ''
+				}}
+			/> -->
 
-			<Tooltip title="Open Twitter / X" placement="left" offset={2}>
-				<Button icon={faTwitter} href="https://twitter.com/techniq35" class="p-2" target="_blank" />
-			</Tooltip>
-
-			<Tooltip title="View repository" placement="left" offset={2}>
-				<Button
-					icon={faGithub}
-					href="https://github.com/techniq/svelte-ux"
-					class="p-2"
-					target="_blank"
-				/>
+			<Tooltip title="Open jacksims.dev" placement="left" offset={2}>
+				<Button href="https://jacksims.dev/" class="p-2" target="_blank">
+					<img class="w-8 opacity-60" src="android-chrome-512x512_jack.png" alt="" /></Button
+				>
 			</Tooltip>
 		</div>
 	</AppBar>
