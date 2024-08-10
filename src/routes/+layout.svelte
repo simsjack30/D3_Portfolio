@@ -50,7 +50,7 @@
 			},
 			NavItem: {
 				classes: {
-					root: 'text-sm text-surface-content pl-6 py-2 hover:bg-surface-100 [&:where(.is-active)]:text-accent-900 dark:[&:where(.is-active)]:text-accent-50 [&:where(.is-active)]:bg-surface-100'
+					root: 'text-sm text-surface-content pl-6 py-2 hover:bg-surface-100 [&:where(.is-active)]:text-accent-900 dark:[&:where(.is-active)]:text-primary-50 [&:where(.is-active)]:bg-surface-100'
 				}
 			}
 		}

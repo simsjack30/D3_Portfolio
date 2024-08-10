@@ -12,7 +12,7 @@
 		TooltipItem,
 		TransformControls
 	} from 'layerchart';
-	import { Field, Switch, Card } from 'svelte-ux';
+	import { Field, Switch, Card, Button, Tooltip as TooltipUX } from 'svelte-ux';
 
 	import GeoDebug from '$lib/docs/GeoDebug.svelte';
 	import Preview from '$lib/docs/Preview.svelte';
@@ -34,27 +34,27 @@
 	import { onMount } from 'svelte';
 
 	let showModal = false;
+	let modalTitle = '';
+	let modalImageUrl = '';
 
-	// Function to open the modal
-	function openModal() {
+	function openModal(title: string, url: string) {
+		modalTitle = title;
+		modalImageUrl = url;
 		showModal = true;
-		document.body.style.overflow = 'hidden'; // Disable scrolling
 	}
 
-	// Function to close the modal
 	function closeModal() {
 		showModal = false;
-		document.body.style.overflow = 'auto'; // Enable scrolling
 	}
 </script>
 
-<main class="p-4">
-	<div class="m-4">
-		<div class="flex justify-between items-end flex-row mb-4">
+<main class="p-2 lg:p-4">
+	<div class="m-2 lg:m-4">
+		<div class="flex justify-between items-end flex-row mb-4 lg:mb-8 space-x-2">
 			<Card class="elevation-none">
-				<div class="p-2 space-y-2">
-					<h1 class="text-3xl">14 Peaks</h1>
-					<h3 class="italic">The world's 8000 meter peaks</h3>
+				<div class="flex justify-between flex-col p-2 lg:p-4 lg:space-y-2 space-y-1 h-full">
+					<h1 class="text-xl lg:text-3xl">14 Peaks</h1>
+					<h3 class="text-sm lg:text-lg italic">The world's 8000 meter peaks</h3>
 				</div>
 			</Card>
 			<div class="">
@@ -131,73 +131,102 @@
 				</Chart>
 			</div>
 		</Preview>
-		<div class="flex flex-col lg:flex-row gap-4 mt-4">
-			<div class="flex flex-col gap-4">
-				<Card class="elevation-none">
-					<div class="m-4">
-						<p>
-							The 14 peaks over 8000 meters in height, also known as the 8000ers, are a group of
-							mountains that are all 8000 meters or higher in height. The 14 peaks are all located
-							in the Himalayas and Karakoram mountain ranges in Asia. Mount Everest, the highest
-							peak in the world, is also the most frequently climbed of the 14 peaks but also the
-							least deadly. K2 is the second highest peak in the world and is considered the most
-							difficult and dangerous of the 14 peaks to climb.
-						</p>
-					</div>
+		<div class="flex flex-col lg:flex-row gap-4 mt-4 w-full">
+			<div class="flex flex-col gap-4 w-full lg:w-2/3">
+				<Card class=" text-sm lg:text-base p-2 lg:p-4 elevation-none h-full">
+					The 8000-meter peaks represent some of the most formidable challenges in mountaineering.
+					Located primarily in the ranges of the Himalayas and the Karakoram, these 14 peaks are
+					spread across Nepal, Pakistan, Tibet, and China. Among them are the world-renowned Mount
+					Everest, the highest at 8,848 meters, and K2, often referred to as the "Savage Mountain"
+					due to its treacherous ascent. These mountains are not just known for their height but
+					also for the extreme dangers they pose. Climbers face severe challenges such as
+					unpredictable weather, avalanches, and the perilous "death zone," where oxygen levels are
+					critically low.
 				</Card>
-				<img
-					class="rounded-md"
-					src="https://www.earths-edge.com/wp-content/uploads/2019/03/iStock-636019160.jpg"
-					alt=""
-				/>
+				<button
+					class="w-full"
+					on:click={() =>
+						openModal(
+							'Annapurna',
+							'https://www.earths-edge.com/wp-content/uploads/2019/03/iStock-636019160.jpg'
+						)}
+				>
+					<img
+						class="rounded-md object-cover hover:scale-105 transition-transform"
+						src="https://www.earths-edge.com/wp-content/uploads/2019/03/iStock-636019160.jpg"
+						alt="8000 Meter Peaks"
+					/>
+				</button>
 			</div>
-			<button on:click={openModal}>
+			<button
+				class="w-full lg:w-1/3"
+				on:click={() =>
+					openModal(
+						'K2',
+						'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg'
+					)}
+			>
 				<img
-					class="rounded-md h-full w-full object-cover hover:scale-105 transition-transform"
+					class="rounded-md h-full object-cover hover:scale-105 transition-transform"
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg"
 					alt="K2"
 				/>
 			</button>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-4 mt-4">
-			<Card class="elevation-none">
-				<p class="m-4">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
-					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa
-					maiores eos ea quibusdam.
-				</p>
+			<Card class=" text-sm lg:text-base p-2 lg:p-4 elevation-none h-full">
+				K2's Treacherous Reputation: K2, the second-highest peak in the world at 8,611 meters, is
+				often referred to as the "Savage Mountain." Despite being slightly shorter than Mount
+				Everest, K2 has a significantly higher fatality rate. For every four climbers who reach the
+				summit, one climber does not make it back, making it one of the most dangerous climbs in the
+				world.
 			</Card>
-			<Card class="elevation-none">
-				<p class="m-4">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
-					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa
-					maiores eos ea quibusdam.
-				</p>
+			<Card class=" text-sm lg:text-base p-2 lg:p-4 elevation-none h-full">
+				Annapurna's Deadly History: Annapurna I, standing at 8,091 meters, has the highest fatality
+				rate of all the 8000-meter peaks. Historically, about 32% of climbers attempting to reach
+				the summit have perished. This high fatality rate is due to the mountain's frequent
+				avalanches and treacherous weather conditions.
 			</Card>
-			<Card class="elevation-none">
-				<p class="m-4">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas labore dolores
-					dignissimos ut, illum enim id quia, accusantium quod hic dolorem optio esse earum ad culpa
-					maiores eos ea quibusdam.
-				</p>
+			<Card class=" text-sm lg:text-base p-2 lg:p-4 elevation-none h-full">
+				First Winter Ascents: The first successful winter ascent of Mount Everest, the tallest of
+				the 8000-meter peaks, was made on February 17, 1980, by Polish climbers Krzysztof Wielicki
+				and Leszek Cichy. Climbing any 8000-meter peak in winter is considered one of the most
+				extreme challenges in mountaineering due to the freezing temperatures, high winds, and
+				shorter days.
 			</Card>
 		</div>
-		<div class="h-[30vh]"></div>
 	</div>
+
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		href="https://en.wikipedia.org/wiki/Eight-thousander"
+	>
+		<Button variant="fill-outline" color="primary" class="m-2 lg:m-4" rounded>Wikipedia</Button>
+	</a>
+	<div class="h-[30vh]"></div>
 </main>
 
 {#if showModal}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div
 		class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
 		on:click={closeModal}
 	>
 		<div class="relative">
+			<!-- Title in the modal -->
+			<div class="absolute top-2 left-2 bg-white bg-opacity-50 rounded-full p-1 px-4 text-black">
+				{modalTitle}
+			</div>
+
 			<!-- Image in the modal -->
 			<img
 				class="rounded-md max-h-[90vh] max-w-[90vw] object-contain"
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg/1200px-K2%2C_Mount_Godwin_Austen%2C_Chogori%2C_Savage_Mountain.jpg"
-				alt="K2"
+				src={modalImageUrl}
+				alt={modalTitle}
 			/>
+
 			<!-- Close button -->
 			<button
 				class="absolute top-2 right-2 bg-white bg-opacity-50 hover:bg-opacity-100 rounded-full p-1"
