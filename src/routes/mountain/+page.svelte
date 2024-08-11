@@ -32,6 +32,8 @@
 	let debugTooltip = false;
 
 	import { onMount } from 'svelte';
+	import { faHome, faLongArrowLeft, faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
 	let showModal = false;
 	let modalTitle = '';
@@ -204,7 +206,24 @@
 	>
 		<Button variant="fill-outline" color="primary" class="m-2 lg:m-4" rounded>Wikipedia</Button>
 	</a>
-	<div class="h-[30vh]"></div>
+	<div class="flex flex-row m-2 lg:m-4 gap-2 w-full mx-auto justify-center mt-16">
+		<a href="/">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowLeft}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/marriage">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowRight}></FontAwesomeIcon></Button
+			></a
+		>
+	</div>
+	<div class="h-[10vh]"></div>
 </main>
 
 {#if showModal}

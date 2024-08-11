@@ -5,6 +5,20 @@
 	import { format as formatDate } from 'date-fns';
 	import { format as d3Format } from 'd3-format';
 
+	import { faChessKing } from '@fortawesome/free-regular-svg-icons';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import {
+		faUser,
+		faCake,
+		faWandMagicSparkles,
+		faArrowRight,
+		faArrowAltCircleRight,
+		faArrowCircleRight,
+		faLongArrowRight,
+		faLongArrowLeft,
+		faHome
+	} from '@fortawesome/free-solid-svg-icons';
+
 	import { Card, Button } from 'svelte-ux';
 
 	import {
@@ -46,7 +60,7 @@
 					<h3 class="text-sm lg:text-lg italic">On August 1st, 2024 INTC Stock Plummets</h3>
 				</div>
 			</Card>
-			<div class="relative hidden md:flex w-16 lg:w-32 rounded overflow-hidden">
+			<div class="relative hidden md:flex w-16 lg:w-24 rounded overflow-hidden">
 				<img
 					class="object-cover w-full h-full transition-transform duration-1000 hover:scale-105"
 					src="https://s3-symbol-logo.tradingview.com/intel--600.png"
@@ -149,5 +163,22 @@
 		<Button variant="fill-outline" color="primary" class="m-2 lg:m-4" rounded>INTC Live Data</Button
 		>
 	</a>
-	<div class="h-[30vh]"></div>
+	<div class="flex flex-row m-2 lg:m-4 gap-2 w-full mx-auto justify-center mt-16">
+		<a href="/marriage">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowLeft}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowRight}></FontAwesomeIcon></Button
+			></a
+		>
+	</div>
+	<div class="h-[10vh]"></div>
 </main>

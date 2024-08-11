@@ -16,6 +16,8 @@
 		schemeTableau10
 	} from 'd3-scale-chromatic';
 	import { Card, Button, SelectField, type MenuOption } from 'svelte-ux';
+	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { faLongArrowLeft, faHome, faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 	export let data;
 
@@ -211,6 +213,30 @@
 			<SelectField options={denominatorOptions} bind:value={denominator} clearable={false} />
 		</div>
 	</div>
+	<div class="flex flex-col lg:flex-row gap-y-4 lg:gap-x-4 gap-x-0 lg:gap-y-0 m-2 lg:m-4">
+		<div class="flex flex-col lg:flex-row space-y-4 lg:-space-y-0 space-x-0 lg:space-x-4 w-full">
+			<Card class="text-sm lg:text-base p-2 lg:p-4 elevation-none h-full"
+				>States in the Mountain West, such as Utah, Wyoming, and Idaho show higher proportions of
+				married households, possibly influenced by cultural and religious factors prevalent in these
+				areas. Conversely, states along the West Coast and North East, including places like Nevada,
+				Oregon, and New York tend to have lower marriage rates.</Card
+			>
+			<Card class="text-sm lg:text-base p-2 lg:p-4 elevation-none h-full"
+				>The distribution of cohabitating households across the United States reveals notable
+				cultural and regional differences. In the Southeast, with the exception of Florida,
+				cohabitating households are relatively rare. This pattern may be influenced by cultural and
+				religious beliefs that emphasize marriage before cohabitation. In contrast, there is a
+				significant increase in cohabitating households as you move West, as well as in the
+				Northeast. These areas may reflect more liberal attitudes toward cohabitation and marriage.</Card
+			>
+			<Card class="text-sm lg:text-base p-2 lg:p-4 elevation-none h-full"
+				>Explore the data by adjusting the parameters to uncover your own insights and trends. The
+				visualizations are based on the 2022 U.S. Census data, offering a snapshot of household
+				dynamics across the country. For more details, you can access the full dataset through the
+				link provided at the bottom of the page.</Card
+			>
+		</div>
+	</div>
 
 	<a
 		target="_blank"
@@ -219,5 +245,22 @@
 	>
 		<Button variant="fill-outline" color="primary" class="m-2 lg:m-4" rounded>Census Data</Button>
 	</a>
-	<div class="h-[30vh]"></div>
+	<div class="flex flex-row m-2 lg:m-4 gap-2 w-full mx-auto justify-center mt-16">
+		<a href="/mountain">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowLeft}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faHome}></FontAwesomeIcon></Button
+			></a
+		>
+		<a href="/stock">
+			<Button variant="fill-outline" color="primary" rounded
+				><FontAwesomeIcon icon={faLongArrowRight}></FontAwesomeIcon></Button
+			></a
+		>
+	</div>
+	<div class="h-[10vh]"></div>
 </main>

@@ -65,7 +65,7 @@
 		<NavItem path="/stock" text="Intel Stock Crash" icon={faChartLine} currentUrl={$page.url} />
 	</svelte:fragment>
 
-	<AppBar title="NYT Showcase">
+	<AppBar title="Data Visualization Portfolio">
 		<div slot="actions" class="flex gap-3 items-center">
 			<!-- <ThemeSwitch
 				checked
