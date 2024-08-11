@@ -17,7 +17,7 @@
 
 <main class="p-4">
 	<div
-		class="flex flex-col gap-y-4 justify-center items-center w-2/3 mx-auto lg:w-1/3 md:w-1/2 m-4"
+		class="flex flex-col gap-y-4 justify-center items-center w-2/3 mx-auto lg:w-1/2 xl:w-1/3 m-4"
 	>
 		<Card class="elevation-none p-2 lg:p-4 w-fit">
 			<h1 class="text-xl md:text-3xl text-center">Welcome!</h1>

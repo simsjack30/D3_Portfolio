@@ -181,5 +181,4 @@
 		>
 	</div>
 	<div class="h-[10vh]"></div>
-	<div class=""></div>
 </main>
