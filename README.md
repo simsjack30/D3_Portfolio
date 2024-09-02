@@ -1,14 +1,32 @@
-# create-svelte-ux-demo
+# D3 Portfolio Site
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This site was built as a demonstration of complex data visualization for web-based applications using D3, the Layer Cake framework, and LayerChart. The site is built using Svelte, SvelteKit, and Svelte-UX. The application features three different charts, each displaying a significantly different dataset and visualization method:
 
-```bash
-npm run dev
+- **United States Choropleth**: Sources information from census data.
+- **Map with Static Tile API Calls**: Displays satellite imagery.
+- **Historic Stock Graphic**: Sources information from financial price history.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+You can visit the live site [here](https://data-portfolio-two.vercel.app/)!
 
-You will learn the rest on the Home page of the demo app.
+---
+### How to Build It Yourself
 
-More info on: https://svelte-ux.techniq.dev/
+1. **Clone the Repository**  
+   `git clone https://github.com/simsjack30/D3_Portfolio.git`
+
+2. **Install Dependencies**  
+   Navigate to the project directory and run:  
+   `npm install`
+
+3. **Substitute Static Tile API**  
+   Replace the static tile API with your choice. (I used Mapbox.)
+
+4. **Connect to Live Data**  
+   Hook up your project to the live data sources referenced in the applicable `+page.ts` files, or use the static files provided.
+
+5. **Run the Development Server**  
+   Start the development server with:  
+   `npm run dev`
+
+---
+Explore my other projects on [GitHub](https://github.com/simsjack30)
